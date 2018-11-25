@@ -26,7 +26,7 @@ public interface List {
 	 * @param c
 	 * @return
 	 */
-	public boolean contains(Object c);
+	public boolean contains(Object e);
 	
 	
 	/**
@@ -73,6 +73,16 @@ public interface List {
 	 * @return
 	 */
 	public boolean remove(Object e);
+	
+	/**
+	 * 替换线性表中序号为i的数据元素为e,返回原数据元素
+	 * @param i
+	 * @param e
+	 * @return
+	 * @throws OutOfBoundaryException
+	 */
+	public Object replace(int i, Object e) throws OutOfBoundaryException;
+	
 	
 	/**
 	 * 返回线性表中序号为i的数据元素
