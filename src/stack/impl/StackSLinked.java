@@ -4,19 +4,19 @@ import exception.StackEmptyException;
 import node.SLNode;
 import stack.Stack;
 /**
- * StackµÄÁ´Ê½´æ´¢ÊµÏÖ
+ * Stackçš„é“¾å¼å­˜å‚¨å®ç°
  * @author hzp
  *
  */
 public class StackSLinked implements Stack {
 
 	/**
-	 * Á´±íÊ×½áµãÒıÓÃ
+	 * é“¾è¡¨é¦–ç»“ç‚¹å¼•ç”¨
 	 */
 	private SLNode top;
 	
 	/**
-	 * Õ»µÄ´óĞ¡
+	 * æ ˆçš„å¤§å°
 	 */
 	private int size;
 	
@@ -45,7 +45,7 @@ public class StackSLinked implements Stack {
 	@Override
 	public Object pop() throws StackEmptyException {
 		if(size < 1) {
-			throw new StackEmptyException("´íÎó£¬¶ÑÕ»Îª¿Õ");
+			throw new StackEmptyException("é”™è¯¯ï¼Œå †æ ˆä¸ºç©º");
 		}
 		Object obj = top.getData();
 		top = top.getNext();
@@ -56,7 +56,7 @@ public class StackSLinked implements Stack {
 	@Override
 	public Object peek() throws StackEmptyException {
 		if(size < 1) {
-			throw new StackEmptyException("´íÎó£¬¶ÑÕ»Îª¿Õ¡£");
+			throw new StackEmptyException("é”™è¯¯ï¼Œå †æ ˆä¸ºç©ºã€‚");
 		}
 		return top.getData();
 	}

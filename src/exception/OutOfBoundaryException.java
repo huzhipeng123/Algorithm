@@ -1,6 +1,6 @@
 package exception;
 /**
- * ���Ա��г������Խ��ʱ�׳����쳣
+ * 线性表中出现序号越界时抛出该异常
  * @author hzp
  *
  */

@@ -1,7 +1,7 @@
 package exception;
 
 /**
- * 队列为空时出队或取队首元素抛出此异常
+ * 闃熷垪涓虹┖鏃跺嚭闃熸垨鍙栭槦棣栧厓绱犳姏鍑烘寮傚父
  * @author hzp
  *
  */

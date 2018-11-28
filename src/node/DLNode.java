@@ -1,22 +1,22 @@
 package node;
 /**
- * Ë«ÏòÁ´±í½áµã¶¨Òå
+ * åŒå‘é“¾è¡¨ç»“ç‚¹å®šä¹‰
  * @author hzp
  *
  */
 public class DLNode implements Node{
 	/**
-	 * Êı¾İÓò
+	 * æ•°æ®åŸŸ
 	 */
 	private Object element;
 	
 	/**
-	 * Ç°Çı½áµã
+	 * å‰é©±ç»“ç‚¹
 	 */
 	private DLNode pre;
 	
 	/**
-	 * ºó¼Ì½áµã
+	 * åç»§ç»“ç‚¹
 	 */
 	private DLNode next;
 

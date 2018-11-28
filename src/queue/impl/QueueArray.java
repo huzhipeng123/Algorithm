@@ -3,34 +3,34 @@ package queue.impl;
 import exception.QueueEmptyException;
 import queue.Queue;
 /**
- * QueueµÄË³Ğò´æ´¢ÊµÏÖ
+ * Queueçš„é¡ºåºå­˜å‚¨å®ç°
  * @author hzp
  *
  */
 public class QueueArray implements Queue{
 
 	/**
-	 * ¶ÓÁĞÄ¬ÈÏ´óĞ¡
+	 * é˜Ÿåˆ—é»˜è®¤å¤§å°
 	 */
 	private static final int CAP = 7;
 	
 	/**
-	 * Êı¾İÔªËØÊı×é
+	 * æ•°æ®å…ƒç´ æ•°ç»„
 	 */
 	private Object[] elements;	
 	
 	/**
-	 * Êı×éµÄ´óĞ¡elements.length
+	 * æ•°ç»„çš„å¤§å°elements.length
 	 */
 	private int capacity;
 	
 	/**
-	 * ¶ÓÊ×Ö¸Õë£¬Ö¸Ïò¶ÓÊ×
+	 * é˜Ÿé¦–æŒ‡é’ˆï¼ŒæŒ‡å‘é˜Ÿé¦–
 	 */
 	private int front;
 	
 	/**
-	 * ¶ÓÎ²Ö¸Õë£¬Ö¸Ïò¶ÓÎ²ºóÒ»¸öÎ»ÖÃ
+	 * é˜Ÿå°¾æŒ‡é’ˆï¼ŒæŒ‡å‘é˜Ÿå°¾åä¸€ä¸ªä½ç½®
 	 */
 	private int rear;
 	
@@ -63,20 +63,20 @@ public class QueueArray implements Queue{
 	}
 
 	/**
-	 * ¶ÓÁĞµÄÀ©Èİ»úÖÆ
+	 * é˜Ÿåˆ—çš„æ‰©å®¹æœºåˆ¶
 	 */
 	private void expandSpace() {
 		Object[] a = new Object[elements.length * 2];
 		int i = front;
 		int j = 0;
-		//½«´Ófront¿ªÊ¼µ½rearÇ°Ò»¸ö´æ´¢µ¥ÔªµÄÔªËØ¸´ÖÆµ½ĞÂÊı×é
+		//å°†ä»frontå¼€å§‹åˆ°rearå‰ä¸€ä¸ªå­˜å‚¨å•å…ƒçš„å…ƒç´ å¤åˆ¶åˆ°æ–°æ•°ç»„
 		while(i != rear) {
 			a[j++] = elements[i];
 			i = (i+1) % capacity;
 		}
 		elements = a;
 		capacity = elements.length;
-		//ÉèÖÃĞÂµÄ¶ÓÊ×£¬¶ÓÎ²Ö¸Õë
+		//è®¾ç½®æ–°çš„é˜Ÿé¦–ï¼Œé˜Ÿå°¾æŒ‡é’ˆ
 		front = 0;
 		rear = j;
 	}
@@ -84,7 +84,7 @@ public class QueueArray implements Queue{
 	@Override
 	public Object dequeue() throws QueueEmptyException {
 		if(isEmpty()) {
-			throw new QueueEmptyException("´íÎó£º¶ÓÁĞÎª¿Õ");
+			throw new QueueEmptyException("é”™è¯¯ï¼šé˜Ÿåˆ—ä¸ºç©º");
 		}
 		Object obj = elements[front];
 		elements[front] = null;
@@ -95,7 +95,7 @@ public class QueueArray implements Queue{
 	@Override
 	public Object peek() throws QueueEmptyException {
 		if(isEmpty()) {
-			throw new QueueEmptyException("´íÎó£º¶ÓÁĞÎª¿Õ");
+			throw new QueueEmptyException("é”™è¯¯ï¼šé˜Ÿåˆ—ä¸ºç©º");
 		}
 		return elements[front];
 	}

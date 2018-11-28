@@ -6,23 +6,23 @@ import node.SLNode;
 import strategy.Strategy;
 import strategy.impl.DefaultStrategy;
 /**
- * ÏßĞÔ±íµÄµ¥Á´±íÊµÏÖ
+ * çº¿æ€§è¡¨çš„å•é“¾è¡¨å®ç°
  * @author hzp
  *
  */
 public class ListSLinked implements List {
 	/**
-	 * Êı¾İÔªËØ±È½Ï²ßÂÔ
+	 * æ•°æ®å…ƒç´ æ¯”è¾ƒç­–ç•¥
 	 */
 	private Strategy strategy;
 	
 	/**
-	 * µ¥Á´±íÊ×½áµãÒıÓÃ
+	 * å•é“¾è¡¨é¦–ç»“ç‚¹å¼•ç”¨
 	 */
 	private SLNode head;
 
 	/**
-	 * ÏßĞÔ±íÖĞÊı¾İÔªËØµÄ¸öÊı
+	 * çº¿æ€§è¡¨ä¸­æ•°æ®å…ƒç´ çš„ä¸ªæ•°
 	 */
 	private int size;
 	
@@ -37,7 +37,7 @@ public class ListSLinked implements List {
 	}
 	
 	/**
-	 * ¸¨Öú·½·¨£º»ñÈ¡Êı¾İÔªËØeËùÔÚ½áµãµÄÇ°Çı½áµã
+	 * è¾…åŠ©æ–¹æ³•ï¼šè·å–æ•°æ®å…ƒç´ eæ‰€åœ¨ç»“ç‚¹çš„å‰é©±ç»“ç‚¹
 	 * @param e
 	 * @return
 	 */
@@ -54,7 +54,7 @@ public class ListSLinked implements List {
 	}
 	
 	/**
-	 * ¸¨Öú·½·¨£º»ñÈ¡ĞòºÅÎª0 <= i <= size µÄÔªËØËùÔÚ½áµãµÄÇ°Çı½áµã
+	 * è¾…åŠ©æ–¹æ³•ï¼šè·å–åºå·ä¸º0 <= i <= size çš„å…ƒç´ æ‰€åœ¨ç»“ç‚¹çš„å‰é©±ç»“ç‚¹
 	 * @param i
 	 * @return
 	 */
@@ -67,7 +67,7 @@ public class ListSLinked implements List {
 	}
 	
 	/**
-	 * »ñÈ¡ĞòºÅÎª0 <= i <= size µÄÔªËØËùÔÚ½áµã
+	 * è·å–åºå·ä¸º0 <= i <= size çš„å…ƒç´ æ‰€åœ¨ç»“ç‚¹
 	 * @param i
 	 * @return
 	 */
@@ -120,7 +120,7 @@ public class ListSLinked implements List {
 	@Override
 	public void insert(int i, Object e) throws OutOfBoundaryException {
 		if(i < 0 || i > size) {
-			throw new OutOfBoundaryException("´íÎó, Ö¸¶¨µÄ²åÈëĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯, æŒ‡å®šçš„æ’å…¥åºå·è¶Šç•Œã€‚");
 		}
 		SLNode p = getPreNode(i);
 		SLNode q = new SLNode(e, p.getNext());
@@ -160,7 +160,7 @@ public class ListSLinked implements List {
 	@Override
 	public Object remove(int i) throws OutOfBoundaryException {
 		if(i < 0 || i >= size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄÉ¾³ıĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„åˆ é™¤åºå·è¶Šç•Œã€‚");
 		}
 		SLNode p = getPreNode(i);
 		Object obj = p.getNext().getData();
@@ -184,7 +184,7 @@ public class ListSLinked implements List {
 	public Object replace(int i, Object e) throws OutOfBoundaryException {
 
 		if(i < 0 || i >= size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„åºå·è¶Šç•Œã€‚");
 		}
 		SLNode p = getNode(i);
 		Object obj = p.getData();
@@ -195,7 +195,7 @@ public class ListSLinked implements List {
 	@Override
 	public Object get(int i) throws OutOfBoundaryException {
 		if(i < 0 || i >= size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„åºå·è¶Šç•Œã€‚");
 		}
 		SLNode p = getNode(i);
 		return p;

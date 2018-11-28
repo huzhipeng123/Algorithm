@@ -4,21 +4,21 @@ import exception.StackEmptyException;
 import stack.Stack;
 
 /**
- * StackµÄË³Ğò´æ´¢ÊµÏÖ
+ * Stackçš„é¡ºåºå­˜å‚¨å®ç°
  * @author hzp
  *
  */
 public class StackArray implements Stack{
 	/**
-	 * Êı×éµÄÄ¬ÈÏ´óĞ¡
+	 * æ•°ç»„çš„é»˜è®¤å¤§å°
 	 */
 	private final int LEN = 8;
 	/**
-	 * Êı¾İÔªËØÊı×é
+	 * æ•°æ®å…ƒç´ æ•°ç»„
 	 */
 	private Object[] elements;
 	/**
-	 * Õ»¶¥Ö¸Õë
+	 * æ ˆé¡¶æŒ‡é’ˆ
 	 */
 	private int top;
 	
@@ -28,7 +28,7 @@ public class StackArray implements Stack{
 	}
 	
 	/**
-	 * ·µ»Ø¶ÑÕ»µÄ´óĞ¡
+	 * è¿”å›å †æ ˆçš„å¤§å°
 	 * @return
 	 */
 	public int getSize() {
@@ -36,7 +36,7 @@ public class StackArray implements Stack{
 	}
 	
 	/**
-	 * ÅĞ¶Ï¶ÑÕ»ÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­å †æ ˆæ˜¯å¦ä¸ºç©º
 	 * @return
 	 */
 	public boolean isEmpty() {
@@ -62,7 +62,7 @@ public class StackArray implements Stack{
 	@Override
 	public Object pop() throws StackEmptyException {
 		if(getSize() < 1) {
-			throw new StackEmptyException("´íÎó£¬¶ÑÕ»Îª¿Õ");
+			throw new StackEmptyException("é”™è¯¯ï¼Œå †æ ˆä¸ºç©º");
 		}
 		Object obj = elements[top];
 		elements[top--] = null;
@@ -74,7 +74,7 @@ public class StackArray implements Stack{
 	@Override
 	public Object peek() throws StackEmptyException {
 		if(getSize() < 1) {
-			throw new StackEmptyException("´íÎó£¬¶ÑÕ»Îª¿Õ¡£");
+			throw new StackEmptyException("é”™è¯¯ï¼Œå †æ ˆä¸ºç©ºã€‚");
 		}
 		return elements[top];
 	}

@@ -3,26 +3,26 @@ package list;
 import exception.OutOfBoundaryException;
 
 /**
- * ³éÏóÊı¾İÀàĞÍList
+ * æŠ½è±¡æ•°æ®ç±»å‹List
  * @author hzp
  *
  */
 public interface List {
 	
 	/**
-	 * ·µ»ØÏßĞÔ±íµÄ´óĞ¡£¬¼´Êı¾İÔªËØµÄ¸öÊı
+	 * è¿”å›çº¿æ€§è¡¨çš„å¤§å°ï¼Œå³æ•°æ®å…ƒç´ çš„ä¸ªæ•°
 	 * @return
 	 */
 	public int getSize();
 
 	/**
-	 * Èç¹ûÏßĞÔ±íÎª¿Õ·µ»Øtrue,·ñÔò·µ»Øfalse
+	 * å¦‚æœçº¿æ€§è¡¨ä¸ºç©ºè¿”å›true,å¦åˆ™è¿”å›false
 	 * @return
 	 */
 	public boolean isEmpty();
 	
 	/**
-	 * ·µ»ØÊı¾İÔªËØeÔÚÏßĞÔ±íÖĞµÄĞòºÅ
+	 * è¿”å›æ•°æ®å…ƒç´ eåœ¨çº¿æ€§è¡¨ä¸­çš„åºå·
 	 * @param c
 	 * @return
 	 */
@@ -30,21 +30,21 @@ public interface List {
 	
 	
 	/**
-	 * ·µ»ØÊı¾İÔªËØeÔÚÏßĞÔ±íÖĞiºÅÎ»ÖÃ
+	 * è¿”å›æ•°æ®å…ƒç´ eåœ¨çº¿æ€§è¡¨ä¸­iå·ä½ç½®
 	 * @param e
 	 * @return
 	 */
 	public int indexOf(Object e);
 	
 	/**
-	 * ½«Êı¾İÔªËØe²åÈëµ½ÏßĞÔ±íÖĞiºÅÎ»ÖÃ
+	 * å°†æ•°æ®å…ƒç´ eæ’å…¥åˆ°çº¿æ€§è¡¨ä¸­iå·ä½ç½®
 	 * @param i
 	 * @param e
 	 */
 	public void insert(int i, Object e) throws OutOfBoundaryException;
 	
 	/**
-	 * ½«Êı¾İÔªËØe²åÈëµ½ÔªËØobjÖ®Ç°
+	 * å°†æ•°æ®å…ƒç´ eæ’å…¥åˆ°å…ƒç´ objä¹‹å‰
 	 * @param obj
 	 * @param e
 	 * @return
@@ -52,7 +52,7 @@ public interface List {
 	public boolean insertBefore(Object obj, Object e);
 
 	/**
-	 * ½«Êı¾İÔªËØe²åÈëµ½ÔªËØobjÖ®ºó
+	 * å°†æ•°æ®å…ƒç´ eæ’å…¥åˆ°å…ƒç´ objä¹‹å
 	 * @param obj
 	 * @param e
 	 * @return
@@ -60,7 +60,7 @@ public interface List {
 	public boolean insertAfter(Object obj, Object e);
 
 	/**
-	 * É¾³ıÏßĞÔ±íÖĞĞòºÅÎªiµÄÊı¾İÔªËØe£¬·µ»ØÔ­Êı¾İÔªËØ
+	 * åˆ é™¤çº¿æ€§è¡¨ä¸­åºå·ä¸ºiçš„æ•°æ®å…ƒç´ eï¼Œè¿”å›åŸæ•°æ®å…ƒç´ 
 	 * @param i
 	 * @return
 	 * @throws OutOfBoundaryException
@@ -68,14 +68,14 @@ public interface List {
 	public Object remove(int i) throws OutOfBoundaryException;
 	
 	/**
-	 * É¾³ıÏßĞÔ±íÖĞµÚÒ»¸öÓëeÏàÍ¬µÄÔªËØ£¬
+	 * åˆ é™¤çº¿æ€§è¡¨ä¸­ç¬¬ä¸€ä¸ªä¸eç›¸åŒçš„å…ƒç´ ï¼Œ
 	 * @param e
 	 * @return
 	 */
 	public boolean remove(Object e);
 	
 	/**
-	 * Ìæ»»ÏßĞÔ±íÖĞĞòºÅÎªiµÄÊı¾İÔªËØÎªe,·µ»ØÔ­Êı¾İÔªËØ
+	 * æ›¿æ¢çº¿æ€§è¡¨ä¸­åºå·ä¸ºiçš„æ•°æ®å…ƒç´ ä¸ºe,è¿”å›åŸæ•°æ®å…ƒç´ 
 	 * @param i
 	 * @param e
 	 * @return
@@ -85,7 +85,7 @@ public interface List {
 	
 	
 	/**
-	 * ·µ»ØÏßĞÔ±íÖĞĞòºÅÎªiµÄÊı¾İÔªËØ
+	 * è¿”å›çº¿æ€§è¡¨ä¸­åºå·ä¸ºiçš„æ•°æ®å…ƒç´ 
 	 * @param i
 	 * @return
 	 * @throws OutOfBoundaryException

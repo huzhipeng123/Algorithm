@@ -6,61 +6,61 @@ import list.LinkedList;
 import node.Node;
 
 /**
- * LinkedListIterator »ùÓÚ LinkedList¾Û¼¯¶ÔÏóµÄµü´úÆ÷ÊµÏÖ
+ * LinkedListIterator åŸºäº LinkedListèšé›†å¯¹è±¡çš„è¿­ä»£å™¨å®ç°
  * @author hzp
  *
  */
 public class LinkedListIterator implements Iterator{
 	/**
-	 * Á´½Ó±í
+	 * é“¾æ¥è¡¨
 	 */
 	private LinkedList list;
 	
 	/**
-	 * µ±Ç°½áµã
+	 * å½“å‰ç»“ç‚¹
 	 */
 	private Node current;
 
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 * @param list
 	 */
 	public LinkedListIterator(LinkedList list) {
 		this.list = list;
-		//ÈôÁĞ±íÎª¿Õ
+		//è‹¥åˆ—è¡¨ä¸ºç©º
 		if(list.isEmpty()) {	
-			//Ôòµ±Ç°ÔªËØÖÃ¿Õ
+			//åˆ™å½“å‰å…ƒç´ ç½®ç©º
 			current = null;
 		}else {
-			//·ñÔò´ÓµÚÒ»¸öÔªËØ¿ªÊ¼
+			//å¦åˆ™ä»ç¬¬ä¸€ä¸ªå…ƒç´ å¼€å§‹
 			current = list.first();
 		}
 	}
 	
 	/**
-	 * ÒÆ¶¯µ½µÚÒ»¸öÔªËØ
+	 * ç§»åŠ¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 	 */
 	public void first() {
-		//ÈôÁĞ±íÎª¿Õ
+		//è‹¥åˆ—è¡¨ä¸ºç©º
 		if(list.isEmpty()) {
-			//Ôòµ±Ç°ÔªËØÖÃ¿Õ
+			//åˆ™å½“å‰å…ƒç´ ç½®ç©º
 			current = null;
 		}else {
-			//·ñÔò´ÓµÚÒ»¸öÔªËØ¿ªÊ¼
+			//å¦åˆ™ä»ç¬¬ä¸€ä¸ªå…ƒç´ å¼€å§‹
 			current = list.first();
 		}
 	}
 	
 	/**
-	 * ÒÆ¶¯µ½ÏÂÒ»¸öÔªËØ
+	 * ç§»åŠ¨åˆ°ä¸‹ä¸€ä¸ªå…ƒç´ 
 	 * @throws OutOfBoundaryException
 	 */
 	public void next() throws OutOfBoundaryException{
 		if(isDone()) {
-			throw new OutOfBoundaryException("´íÎó£¬ÒÑ¾­Ã»ÓĞÔªËØ¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼Œå·²ç»æ²¡æœ‰å…ƒç´ ã€‚");
 		}
 		if(current == list.last()) {
-			//µ±Ç°ÔªËØºóÃæÃ»ÓĞ¸ü¶àÔªËØ
+			//å½“å‰å…ƒç´ åé¢æ²¡æœ‰æ›´å¤šå…ƒç´ 
 			current = null;
 		}else {
 			current = list.getNext(current);
@@ -68,7 +68,7 @@ public class LinkedListIterator implements Iterator{
 	}
 	
 	/**
-	 * ·µ»Øµ±Ç°ÔªËØ
+	 * è¿”å›å½“å‰å…ƒç´ 
 	 * @return
 	 */
 	public boolean isDone() {
@@ -78,7 +78,7 @@ public class LinkedListIterator implements Iterator{
 	
 	public Object currentItem() throws OutOfBoundaryException{
 		if(isDone()) {
-			throw new OutOfBoundaryException("´íÎó£ºÒÑ¾­Ã»ÓĞÔªËØ¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼šå·²ç»æ²¡æœ‰å…ƒç´ ã€‚");
 		}
 		return current.getData();
 	}

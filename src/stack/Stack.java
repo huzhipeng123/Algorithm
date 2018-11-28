@@ -3,38 +3,38 @@ package stack;
 import exception.StackEmptyException;
 
 /**
- * ¶ÑÕ»½Ó¿Ú
+ * å †æ ˆæ¥å£
  * @author hzp
  *
  */
 public interface Stack {
 	/**
-	 * ·µ»Ø¶ÑÕ»µÄ´óĞ¡
+	 * è¿”å›å †æ ˆçš„å¤§å°
 	 * @return
 	 */
 	public int getSize();
 	
 	/**
-	 * ÅĞ¶Ï¶ÑÕ»ÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­å †æ ˆæ˜¯å¦ä¸ºç©º
 	 * @return
 	 */
 	public boolean isEmpty();
 	
 	/**
-	 * Êı¾İÔªËØeÈëÕ»
+	 * æ•°æ®å…ƒç´ eå…¥æ ˆ
 	 * @param e
 	 */
 	public void push(Object e);
 	
 	/**
-	 * Õ»¶¥ÔªËØ³öÕ»
+	 * æ ˆé¡¶å…ƒç´ å‡ºæ ˆ
 	 * @return
 	 * @throws StackEmptyException
 	 */
 	public Object pop() throws StackEmptyException;
 	
 	/**
-	 * È¡Õ»¶¥ÔªËØ
+	 * å–æ ˆé¡¶å…ƒç´ 
 	 * @return
 	 * @throws StackEmptyException
 	 */

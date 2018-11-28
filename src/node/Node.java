@@ -1,18 +1,18 @@
 package node;
 /**
- * ½áµã½Ó¿Ú
+ * ç»“ç‚¹æ¥å£
  * @author hzp
  *
  */
 public interface Node {
 	/**
-	 * »ñÈ¡½áµãÊı¾İÓò
+	 * è·å–ç»“ç‚¹æ•°æ®åŸŸ
 	 * @return
 	 */
 	public Object getData();
 	
 	/**
-	 * ÉèÖÃ½áµãÊı¾İÓò
+	 * è®¾ç½®ç»“ç‚¹æ•°æ®åŸŸ
 	 * @param obj
 	 */
 	public void setData(Object obj);

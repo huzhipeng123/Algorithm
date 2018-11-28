@@ -1,28 +1,28 @@
 package iterator;
 /**
- * µü´úÆ÷½Ó¿Ú
+ * è¿­ä»£å™¨æ¥å£
  * @author hzp
  *
  */
 public interface Iterator {
 	/**
-	 * ÒÆ¶¯µ½µÚÒ»¸öÔªËØ
+	 * ç§»åŠ¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 	 */
 	public void first();
 	
 	/**
-	 * ÒÆ¶¯µ½ÏÂÒ»¸öÔªËØ
+	 * ç§»åŠ¨åˆ°ä¸‹ä¸€ä¸ªå…ƒç´ 
 	 */
 	public void next();
 	
 	/**
-	 * ¼ì²éµü´úÆ÷ÖĞÊÇ·ñ»¹ÓĞÊ£ÓàµÄÔªËØ
+	 * æ£€æŸ¥è¿­ä»£å™¨ä¸­æ˜¯å¦è¿˜æœ‰å‰©ä½™çš„å…ƒç´ 
 	 * @return
 	 */
 	public boolean isDone();
 	
 	/**
-	 * ·µ»Øµ±Ç°ÔªËØ
+	 * è¿”å›å½“å‰å…ƒç´ 
 	 * @return
 	 */
 	public Object currentItem();

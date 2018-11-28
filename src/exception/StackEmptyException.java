@@ -1,6 +1,6 @@
 package exception;
 /**
- * 堆栈为空时出栈或去栈顶元素抛出此异常
+ * 鍫嗘爤涓虹┖鏃跺嚭鏍堟垨鍘绘爤椤跺厓绱犳姏鍑烘寮傚父
  * @author hzp
  *
  */

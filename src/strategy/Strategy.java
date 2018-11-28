@@ -1,13 +1,13 @@
 package strategy;
 /**
- * Ê¹ÓÃStrategy½Ó¿ÚÊµÏÖ¸÷ÖÖ²»Í¬Êı¾İÔªËØÏà»¥Ö®¼ä¶ÀÁ¢µÄ±È½Ï²ßÂÔ
+ * ä½¿ç”¨Strategyæ¥å£å®ç°å„ç§ä¸åŒæ•°æ®å…ƒç´ ç›¸äº’ä¹‹é—´ç‹¬ç«‹çš„æ¯”è¾ƒç­–ç•¥
  * @author hzp
  *
  */
 public interface Strategy{
 
 	/**
-	 * ÅĞ¶ÏÁ½¸öÊı¾İÔªËØÊÇ·ñÏàµÈ
+	 * åˆ¤æ–­ä¸¤ä¸ªæ•°æ®å…ƒç´ æ˜¯å¦ç›¸ç­‰
 	 * @param obj1
 	 * @param obj2
 	 * @return
@@ -15,10 +15,10 @@ public interface Strategy{
 	public boolean equal(Object obj1, Object obj2);
 	
 	/**
-	 * ±È½ÏÁ½¸öÊı¾İÔªËØµÄ´óĞ¡
-	 * Èç¹ûobj1 < obj2, ·µ»Ø-1
-	 * Èç¹ûobj1 = obj2, ·µ»Ø0
-	 * Èç¹ûobj1 > obj2, ·µ»Ø1
+	 * æ¯”è¾ƒä¸¤ä¸ªæ•°æ®å…ƒç´ çš„å¤§å°
+	 * å¦‚æœobj1 < obj2, è¿”å›-1
+	 * å¦‚æœobj1 = obj2, è¿”å›0
+	 * å¦‚æœobj1 > obj2, è¿”å›1
 	 * @param obj1
 	 * @param obj2
 	 * @return

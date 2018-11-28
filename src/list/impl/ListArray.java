@@ -8,22 +8,22 @@ import strategy.impl.DefaultStrategy;
 public class ListArray implements List{
 
 	/**
-	 * Êı×éµÄÄ¬ÈÏ´óĞ¡
+	 * æ•°ç»„çš„é»˜è®¤å¤§å°
 	 */
 	private final int LEN = 8;
 	
 	/**
-	 * Êı×éÔªËØ±È½Ï²ßÂÔ
+	 * æ•°ç»„å…ƒç´ æ¯”è¾ƒç­–ç•¥
 	 */
 	private Strategy strategy;
 	
 	/**
-	 * ÏßĞÔ±íÖĞÊı¾İÔªËØµÄ¸öÊı
+	 * çº¿æ€§è¡¨ä¸­æ•°æ®å…ƒç´ çš„ä¸ªæ•°
 	 */
 	private int size;
 	
 	/**
-	 * Êı¾İÔªËØÊı×é
+	 * æ•°æ®å…ƒç´ æ•°ç»„
 	 */
 	private Object[] elements;
 	
@@ -70,7 +70,7 @@ public class ListArray implements List{
 	@Override
 	public void insert(int i, Object e) throws OutOfBoundaryException {
 		if(i < 0 || i > size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄ²åÈëĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„æ’å…¥åºå·è¶Šç•Œã€‚");
 		}
 		if(size >= elements.length) {
 			expandSpace();
@@ -84,8 +84,8 @@ public class ListArray implements List{
 	}
 
 	/**
-	 * Êı×é¿Õ¼äÀ©Èİ
-	 * Ã¿´ÎÖ´ĞĞÀ©ÈİÎªÔ­Êı×é´óĞ¡µÄ¶ş±¶
+	 * æ•°ç»„ç©ºé—´æ‰©å®¹
+	 * æ¯æ¬¡æ‰§è¡Œæ‰©å®¹ä¸ºåŸæ•°ç»„å¤§å°çš„äºŒå€
 	 */
 	private void expandSpace() {
 		Object[] a = new Object[elements.length * 2];
@@ -118,7 +118,7 @@ public class ListArray implements List{
 	@Override
 	public Object remove(int i) throws OutOfBoundaryException {
 		if(i < 0 || i >= size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄÉ¾³ıĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„åˆ é™¤åºå·è¶Šç•Œã€‚");
 		}
 		Object obj = elements[i];
 		for(int j = i; j < size - 1; j++) {
@@ -141,7 +141,7 @@ public class ListArray implements List{
 	@Override
 	public Object get(int i) throws OutOfBoundaryException {
 		if(i < 0 || i >= size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„åºå·è¶Šç•Œã€‚");
 		}
 		return elements[i];
 	}
@@ -149,7 +149,7 @@ public class ListArray implements List{
 	@Override
 	public Object replace(int i, Object e) throws OutOfBoundaryException {
 		if(i < 0 || i >= size) {
-			throw new OutOfBoundaryException("´íÎó£¬Ö¸¶¨µÄĞòºÅÔ½½ç¡£");
+			throw new OutOfBoundaryException("é”™è¯¯ï¼ŒæŒ‡å®šçš„åºå·è¶Šç•Œã€‚");
 		}
 		Object obj = elements[i];
 		elements[i] = e;

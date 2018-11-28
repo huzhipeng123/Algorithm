@@ -1,18 +1,18 @@
 package node;
 /**
- * µ¥Á´±í½áµã¶¨Òå
+ * å•é“¾è¡¨ç»“ç‚¹å®šä¹‰
  * @author hzp
  *
  */
 public class SLNode implements Node{
 	
 	/**
-	 * µ¥Á´±í½áµãÔªËØÖµ
+	 * å•é“¾è¡¨ç»“ç‚¹å…ƒç´ å€¼
 	 */
 	private Object element;
 	
 	/**
-	 * µ¥Á´±í½áµãµÄÏÂÒ»½áµã
+	 * å•é“¾è¡¨ç»“ç‚¹çš„ä¸‹ä¸€ç»“ç‚¹
 	 */
 	private SLNode next;
 	

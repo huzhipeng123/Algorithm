@@ -4,24 +4,24 @@ import exception.QueueEmptyException;
 import node.SLNode;
 import queue.Queue;
 /**
- * QueueµÄÁ´Ê½´æ´¢ÊµÏÖ
+ * Queueçš„é“¾å¼å­˜å‚¨å®ç°
  * @author hzp
  *
  */
 public class QueueSLinked implements Queue {
 
 	/**
-	 * ¶ÓÊ×½áµã
+	 * é˜Ÿé¦–ç»“ç‚¹
 	 */
 	private SLNode front;
 	
 	/**
-	 * ¶ÓÎ²½áµã
+	 * é˜Ÿå°¾ç»“ç‚¹
 	 */
 	private SLNode rear;
 	
 	/**
-	 * ¶ÓÁĞ´óĞ¡
+	 * é˜Ÿåˆ—å¤§å°
 	 */
 	private int size;
 	
@@ -52,12 +52,12 @@ public class QueueSLinked implements Queue {
 	@Override
 	public Object dequeue() throws QueueEmptyException {
 		if(size < 1) {
-			throw new QueueEmptyException("´íÎó£º¶ÓÁĞÎª¿Õ");
+			throw new QueueEmptyException("é”™è¯¯ï¼šé˜Ÿåˆ—ä¸ºç©º");
 		}
 		SLNode p = front.getNext();
 		front.setNext(p.getNext());
 		size--;
-		//Èç¹û¶ÓÁĞÎª¿Õ£¬rearÖ¸ÏòÍ·½áµã
+		//å¦‚æœé˜Ÿåˆ—ä¸ºç©ºï¼ŒrearæŒ‡å‘å¤´ç»“ç‚¹
 		if(size < 1) {
 			rear = front;
 		}
@@ -67,7 +67,7 @@ public class QueueSLinked implements Queue {
 	@Override
 	public Object peek() throws QueueEmptyException {
 		if(size < 1) {
-			throw new QueueEmptyException("´íÎó£º¶ÓÁĞÎª¿Õ");
+			throw new QueueEmptyException("é”™è¯¯ï¼šé˜Ÿåˆ—ä¸ºç©º");
 		}
 		return front.getNext().getData();
 	}
