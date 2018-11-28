@@ -1,7 +1,6 @@
 package utils.code;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 /**
@@ -43,7 +42,7 @@ public class CodeConversionUtil {
 	 */
 	private static void codeConversion(File file, String oldCode, String newCode) throws FileNotFoundException {
 		//以oldCode格式读取文件
-		FileInputStream fis = new FileInputStream(file);
+//		FileInputStream fis = new FileInputStream(file);
 	
 	}
 	

@@ -9,7 +9,11 @@ import iterator.impl.LinkedListIterator;
 import list.LinkedList;
 import node.DLNode;
 import node.Node;
-
+/**
+ * 带前驱结点和后继结点的单链表
+ * @author Administrator
+ *
+ */
 public class LinkedListDLNode implements LinkedList{
 	
 	/**
